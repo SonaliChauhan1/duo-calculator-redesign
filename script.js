@@ -85,3 +85,13 @@ document.querySelector(".modal-close").addEventListener("click", () => {
     emailModal.classList.remove("open");
     emailModal.setAttribute("aria-hidden", "true");
 });
+
+//Order estimate modal functionality
+const reportBtn = document.querySelector(".secondary-btn");
+const emailBtn = document.querySelector("#send-email-btn");
+reportBtn.addEventListener("click", () => {
+    alert("This is a front-end prototype. Report ordering would be connected to the backend in the production application.");
+});
+emailBtn.addEventListener("click", () => {
+    alert("This is a front-end prototype. Report ordering would be connected to the backend in the production application.");
+});
