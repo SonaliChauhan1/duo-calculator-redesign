@@ -1,0 +1,330 @@
+<!--Author: Sonali Chauhan
+    Date: 15th July 2026-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Construction Cost Calculator</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div>
+
+                <span class="badge">
+                    Duo Tax Construction Estimator
+                </span>
+
+                <h1>
+                    Construction Cost Calculator
+                </h1>
+
+                <p>
+                    Estimate your construction costs in under a minute using our
+                    modern construction estimator.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="calculator">
+
+        <div class="form-card">
+
+            <h2>Project Details</h2>
+
+            <p class="section-description">
+            Enter your project information to receive an estimated construction cost.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Investment Property Type</label>
+                    <select>
+                        <option>Select Property Type</option>
+                        <option>House</option>
+                        <option>Granny Flat</option>
+                        <option>Townhouse</option>
+                        <option>Apartment</option>
+                        <option>Office</option>
+                        <option>Warehouse</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Construction Completion Year</label>
+                    <select>
+                        <option>Select Year</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Investment Property State</label>
+                    <select>
+                        <option>Select State</option>
+                        <option>New South Wales</option>
+                        <option>Victoria</option>
+                        <option>Queensland</option>
+                        <option>Western Australia</option>
+                        <option>South Australia</option>
+                        <option>Tasmania</option>
+                        <option>Northern Territory</option>
+                        <option>Australian Capital Territory</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Build Type</label>
+                    <select>
+                        <option>Select Build</option>
+                        <option>New Build</option>
+                        <option>Knock-down & rebuild</option>
+                        <option>Renovation – light (≤30% area)</option>
+                        <option>Renovation – major (>30% area)</option>
+                        <option>Extension / addition</option>
+                        <option>Granny flat / secondary dwelling</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Specification / Finish Level</label>
+                    <select>
+                        <option>Select Level</option>
+                        <option>Economy</option>
+                        <option>Standard</option>
+                        <option>Premium</option>
+                        <option>Luxury</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How many bedrooms?</label>
+                    <select>
+                        <option>Select bedrooms</option>
+                        <option>1 bedroom</option>
+                        <option>2 bedrooms</option>
+                        <option>3 bedrooms</option>
+                        <option>4 bedrooms</option>
+                        <option>5+ bedrooms</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Number of floors?</label>
+                    <select>
+                        <option>Select floors</option>
+                        <option>1 floor</option>
+                        <option>2 floors</option>
+                        <option>3+ floors</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Wall Type</label>
+                    <select>
+                        <option>Select wall type</option>
+                        <option>Brick veneer</option>
+                        <option>Double brick</option>
+                        <option>Reinforced concrete</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="floor-area">Floor Area (m²)</label>
+                    <input
+                        id="floor-area"
+                        type="number"
+                        placeholder="Enter floor area">
+                    <p class="error-message"></p>
+                </div>
+
+            </div>
+
+            <div class="feature-section">
+                <div>
+                    <h3>Optional features</h3>
+                    <p>Add elements that may influence the scope of your build.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <label class="feature">
+                        <span>Basement</span>
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+
+                    <label class="feature">
+                        <span>Elevator</span>
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+
+                    <label class="feature">
+                        <span>Mezzanine</span>
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+
+                    <label class="feature">
+                        <span>Ducted air-conditioning</span>
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-group">
+
+                <button class="primary-btn" type="button">
+                    Calculate Estimate
+                </button>
+
+                <button class="reset-btn" type="button">
+                    ↺ Reset
+                </button>
+
+            </div>
+
+        </div>
+
+        <aside class="results-card">
+
+            <p class="result-title">
+            Estimated Construction Cost
+            </p>
+
+            <p class="result-description">
+            Based on your selections.
+            </p>
+           
+
+            <h2 id="estimate">
+                $0
+            </h2>
+            <p>
+                ✔ Indicative Estimate
+            </p><br>
+
+            <div class="estimate-row">
+
+                <span>Low Estimate</span>
+
+                <strong id = "low">$0</strong>
+
+            </div>
+
+            <div class="estimate-row">
+
+                <span>High Estimate</span>
+
+                <strong id = "high">$0</strong>
+
+            </div>
+
+            <p class="disclaimer">
+                This estimate is indicative only and should
+                not replace a professional cost assessment.
+            </p>
+
+            <button class="secondary-btn">
+
+                Order Initial Cost Report
+
+            </button>
+
+            <button class="email-btn" type="button">
+                Email me the results
+            </button>
+
+        </aside>
+
+    </section>
+
+    <section class="accordion">
+
+        <h2 class="accordion-title">How your estimate is calculated</h2>
+
+        <div class="accordion-content">
+
+           <div class="calculation-steps">
+                <div>
+                    <b>1</b>
+                    <span>
+                        <strong>Base build rate</strong>
+                        Property type, location and build type.
+                    </span>
+                </div>
+
+                <div>
+                    <b>2</b>
+                    <span>
+                        <strong>Project scale</strong>
+                        Floor area, bedrooms and number of floors.
+                    </span>
+                </div>
+
+                <div>
+                    <b>3</b>
+                    <span>
+                        <strong>Selected inclusions</strong>
+                        Finish level, wall type and optional features.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<div class="modal" id="email-modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true">
+        <button class="modal-close" type="button">×</button>
+
+        <span class="badge">Your estimate</span>
+        <h2>Email me the results</h2>
+        <p>Send a copy of your indicative estimate to your inbox.</p>
+
+        <div class="email-grid">
+            <input placeholder="First name">
+            <input placeholder="Last name">
+            <input placeholder="Mobile number">
+            <input type="email" placeholder="Email address">
+        </div>
+
+        <button class="primary-btn" type="button">
+            Send my estimate
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
